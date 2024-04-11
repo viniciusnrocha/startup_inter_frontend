@@ -2,26 +2,26 @@
 
 ## Tecnologias Usadas:
 
- - HTML5
- - CSS3
- - Javascript
+- HTML5
+- CSS3
+- Javascript
 
 ## Estrutura:
 
- ### Landing page:
+### Landing page:
 
- - Barra De Navegação
- - Hero Section
- - Sobre
- - Projetos
- - Sustentabilidade
- - Contato
- - Footer (rodapé)
+- Barra De Navegação
+- Hero Section
+- Sobre
+- Projetos
+- Sustentabilidade
+- Contato
+- Footer (rodapé)
 
- ### Login:
+### Login:
 
- - Formulário: Email e Senha
+- Formulário: Email e Senha
 
- ### Dashboard
+### Dashboard
 
- - CRUD (Create, Read, Update, Delete) dos agentes 
+- CRUD (Create, Read, Update, Delete) dos agentes
