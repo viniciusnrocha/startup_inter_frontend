@@ -8,8 +8,8 @@
 
 body {
   background-color: var(--dark_purple);
-  min-height: 100vh;
-  min-height: 100svh;
+  min-height: 400vh;
+  min-height: 400svh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -27,8 +27,9 @@ nav {
   transform: translateX(-50%);
   width: 100%;
   backdrop-filter: blur(5px);
-  box-shadow: 0 0.1em 1.5em 0 var(--cyan);
+  box-shadow: 0 0.1em 1.5em 0 #826fff65;
   z-index: 3;
+  transition: box-shadow 200ms linear;
 }
 
 nav header {
@@ -117,7 +118,7 @@ nav aside ul {
   display: flex;
   flex-direction: column;
   width: 100%;
-  font-size: clamp(1.4em, 0.6em + 1vw, 1.5em);
+  font-size: clamp(1.2em, 0.4em + .8vw, 1.5em);
 }
 
 nav aside ul li {
@@ -132,12 +133,71 @@ nav aside ul a {
 nav aside button {
   cursor: pointer;
   padding: 0.8em 2em;
-  font-size: clamp(1.4em, 0.6em + 1vw, 1.5em);
+  font-size: clamp(1.2em, 0.4em + .8vw, 1.5em);
   border-radius: 2em;
+  background-color: var(--medium_purple);
+  border: 1px solid transparent;
+  color: var(--almost_white);
+}
+
+.heroSection{
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+}
+
+.heroSection aside {
+  display: flex;
+  box-shadow: 0 0 1em 0 var(--medium_purple);
+  border-radius: 50%;
+  background-color: red;
+}
+
+.heroSection img{
+  width: 22em;
+  height: auto;
+  border-radius: 50%;
+}
+
+.heroSection main{
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  max-width: 25em;
+  align-items: flex-start;
+}
+.heroSection main p{
+  font-size: 1.4em;
+}
+.heroSection main h1{
+  font-size: 2.5em;
+}
+.heroSection main h1 span{
+  color: var(--cyan);
+}
+
+.heroSection main a{
+  width: 100%;
+}
+.heroSection main button{
+  cursor: pointer;
+  width: 100%;
+  border-radius: 2em;
+  padding: 1em 1.5em;
+  font-size: 1em;
+  font-weight: bolder;
   background-color: var(--cyan);
   border: 1px solid transparent;
-  color: var(--very_dark_purple);
+  transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
+.heroSection main button:hover{
+  background-color: transparent;
+  color: var(--almost_white);
+  border: 1px solid var(--cyan);
+}
+
 
 /* Tablet */
 @media only screen and (min-width: 37.5em) {
@@ -172,28 +232,22 @@ nav aside button {
 }
 
 /* Desktop */
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 75em) {
   nav {
-    display: flex;
-    top: 8%;
+    top: 3%;
     justify-content: space-between;
     padding: 1.2em;
-    width: calc(100% - 10vw);
+    width: calc(100% - 25vw);
     border-radius: 2em;
-    backdrop-filter: blur(5px);
-    box-shadow: 0 0 1.5em 0 #15f5b952;
+    box-shadow: 0 0 1.5em 0 #826fff65;
   }
 
-  nav header {
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-  }
 
   nav header img {
-    width: 8em;
-    height: 8em;
+    width: 7em;
+    height: 7em;
   }
+  
   nav header h1 {
     font-size: 2em;
   }
@@ -212,11 +266,11 @@ nav aside button {
     width: auto;
     height: auto;
     flex-direction: row;
-    justify-content: space-between;
-    z-index: 1;
+    gap: 4em;
     width: auto;
     transform: translateX(0);
     transition: none;
+    background-color: transparent;
   }
 
   nav aside ul {
@@ -226,8 +280,23 @@ nav aside button {
   }
 
   nav aside ul li {
+    position: relative;
     padding: 0;
-    text-align: center;
+  }
+  nav aside ul li div {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: .1em;
+    background-color: var(--cyan);
+    border-radius: 100%;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: all 200ms cubic-bezier(0.215, 0.610, 0.355, 1);
+  }
+
+  nav aside ul li:hover div {
+    transform: scaleX(1)
   }
 
   nav aside ul a {
@@ -235,6 +304,7 @@ nav aside button {
   }
 
   nav aside button {
+    padding: .5em 1.5em;
     background-color: transparent;
     border: 1px solid var(--medium_purple);
     color: var(--almost_white);
