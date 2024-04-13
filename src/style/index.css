@@ -13,11 +13,6 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-p,
-a,
-ul {
-  color: var(--almost_white);
-}
 
 nav {
   display: flex;
@@ -89,9 +84,11 @@ nav:has(input:checked) label div {
 nav:has(input:checked) label div:first-child {
   transform: rotateZ(40deg) translate(45%);
 }
+
 nav:has(input:checked) label div:nth-child(2) {
   transform: translateX(1000%);
 }
+
 nav:has(input:checked) label div:nth-child(3) {
   transform: rotateZ(140deg) translate(-45%);
 }
@@ -124,6 +121,7 @@ nav aside ul {
 nav aside ul li {
   padding: 1em;
   text-align: center;
+  color: var(--almost_white);
 }
 
 nav aside ul a {
@@ -140,64 +138,56 @@ nav aside button {
   color: var(--almost_white);
 }
 
-.heroSection{
+.heroSection {
   display: flex;
-  position: relative;
   align-items: center;
-  justify-content: space-around;
-  height: 100vh;
+  justify-content: center;
+  height: 100svh;
 }
 
 .heroSection aside {
-  display: flex;
-  box-shadow: 0 0 1em 0 var(--medium_purple);
-  border-radius: 50%;
-  background-color: red;
+  display: none;
 }
 
-.heroSection img{
-  width: 22em;
-  height: auto;
-  border-radius: 50%;
-}
-
-.heroSection main{
+.heroSection main {
   display: flex;
   flex-direction: column;
   gap: 3em;
+  align-items: center;
+  text-align: center;
+  padding: 0 2em;
   max-width: 25em;
-  align-items: flex-start;
+  width: 100%;
 }
-.heroSection main p{
-  font-size: 1.4em;
+
+.heroSection main h1 {
+  color: var(--almost_white);
+  font-size: clamp(2.2em, 1.3em + 1.3vw, 2.8em);
 }
-.heroSection main h1{
-  font-size: 2.5em;
-}
-.heroSection main h1 span{
+
+.heroSection main h1 span {
   color: var(--cyan);
 }
 
-.heroSection main a{
-  width: 100%;
-}
-.heroSection main button{
-  cursor: pointer;
-  width: 100%;
-  border-radius: 2em;
-  padding: 1em 1.5em;
-  font-size: 1em;
-  font-weight: bolder;
-  background-color: var(--cyan);
-  border: 1px solid transparent;
-  transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-.heroSection main button:hover{
-  background-color: transparent;
-  color: var(--almost_white);
-  border: 1px solid var(--cyan);
+.heroSection main p {
+  color: #f0f3ffb4;
+  font-size: clamp(1em, .8em + .8vw, 1.8em);
 }
 
+.heroSection main a {
+  width: 100%;
+}
+
+.heroSection main button {
+  cursor: pointer;
+  background-color: var(--cyan);
+  border: 1px solid transparent;
+  font-size: clamp(1em, .8em + .8vw, 1.8em);
+  padding: 1em 1.5em;
+  width: 100%;
+  border-radius: 2em;
+  font-weight: 700;
+}
 
 /* Tablet */
 @media only screen and (min-width: 37.5em) {
@@ -216,7 +206,7 @@ nav aside button {
     z-index: 2;
   }
 
-  nav:has(input:checked) > div {
+  nav:has(input:checked)>div {
     position: absolute;
     top: 0;
     left: 0;
@@ -229,6 +219,23 @@ nav aside button {
   nav aside {
     width: 50%;
   }
+
+  .heroSection {
+    justify-content: space-around;
+  }
+
+  .heroSection aside {
+    display: inline-block;
+    box-shadow: 0 0 1em 0 var(--medium_purple);
+    border-radius: 50%;
+  }
+
+  .heroSection aside img {
+    width: 18em;
+    height: auto;
+    border-radius: 50%;
+  }
+
 }
 
 /* Desktop */
@@ -247,7 +254,7 @@ nav aside button {
     width: 7em;
     height: 7em;
   }
-  
+
   nav header h1 {
     font-size: 2em;
   }
@@ -259,7 +266,7 @@ nav aside button {
 
   nav label div {
     display: none;
-}
+  }
 
   nav aside {
     position: static;
@@ -283,6 +290,7 @@ nav aside button {
     position: relative;
     padding: 0;
   }
+
   nav aside ul li div {
     position: absolute;
     bottom: 0;
@@ -317,7 +325,63 @@ nav aside button {
     color: var(--very_dark_purple);
   }
 
-  nav > div{
+  nav>div {
     display: none;
+  }
+
+  .heroSection {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .heroSection aside {
+    display: flex;
+    box-shadow: 0 0 1em 0 var(--medium_purple);
+    border-radius: 50%;
+  }
+
+  .heroSection aside img {
+    width: 22em;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  .heroSection main {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    max-width: 25em;
+    align-items: flex-start;
+  }
+
+  .heroSection main p {
+    font-size: 1.4em;
+  }
+
+  .heroSection main h1 {
+    font-size: 2.5em;
+  }
+
+  .heroSection main a {
+    width: 100%;
+  }
+
+  .heroSection main button {
+    cursor: pointer;
+    width: 100%;
+    padding: 1em 1.5em;
+    font-size: 1em;
+    font-weight: bolder;
+    background-color: var(--cyan);
+    border: 1px solid transparent;
+    transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .heroSection main button:hover {
+    background-color: transparent;
+    color: var(--almost_white);
+    border: 1px solid var(--cyan);
   }
 }
