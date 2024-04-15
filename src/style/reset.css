@@ -1,7 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&family=Poppins:wght@400;600;800&display=swap');
+
+
 html {
   box-sizing: border-box;
   font-size: 16px;
+  scroll-behavior: smooth;
 }
+
+::selection{
+  background-color: #826fff;
+  color: #fff;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: .4em;
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  cursor: grab;
+  border-radius: 2em;
+  background: #836fff;
+}
+
+::-webkit-scrollbar-thumb:active {
+  cursor: grabbing;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #705afd;
+}
+/* End Scrollbar Styles */
 
 *,
 *:before,
@@ -11,6 +44,11 @@ html {
 
 *:not(h1, h2, h3, h4, h5, h6) {
   font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: "Kanit", sans-serif;
   font-style: normal;
 }
 
@@ -41,4 +79,5 @@ a {
 img {
   max-width: 100%;
   height: auto;
+  pointer-events: none;
 }
