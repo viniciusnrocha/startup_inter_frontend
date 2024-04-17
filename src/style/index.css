@@ -189,28 +189,28 @@ nav aside button {
   font-weight: 700;
 }
 
-.quemSomosSection {
+.quemSomosSection, .chat {
   padding: 6em 1em;
   background-color: var(--very_dark_purple);
 }
 
-.quemSomosSection aside {
+.quemSomosSection aside, .chat aside {
   display: none;
 }
 
-.quemSomosSection main {
+.quemSomosSection main, .chat main {
   display: flex;
   flex-direction: column;
   gap: 2em;
 }
 
-.quemSomosSection main h2 {
+.quemSomosSection main h2, .chat main h2 {
   color: var(--cyan);
   font-size: clamp(1.7em, 1.1em + 1.1vw, 2.3em);
   font-weight: 600;
 }
 
-.quemSomosSection main p {
+.quemSomosSection main p, .chat main p {
   color: #f0f3ffb6;
   font-size: clamp(1em, 0.4em + 0.8vw, 1.5em);
   line-height: 1.8;
@@ -263,7 +263,7 @@ nav aside button {
     border-radius: 50%;
   }
 
-  .quemSomosSection {
+  .quemSomosSection, .chat {
     display: grid;
     place-items: center;
     grid-template-columns: 1fr 2fr;
@@ -271,21 +271,21 @@ nav aside button {
     padding: 9em 1em;
   }
 
-  .quemSomosSection aside {
+  .quemSomosSection aside, .chat aside {
     display: flex;
     align-items: center;
   }
 
-  .quemSomosSection aside img {
+  .quemSomosSection aside img , .chat aside img{
     width: clamp(25em, 12.5em + 12.5vw, 30em);
     filter: brightness(0.7) contrast(1.5);
   }
 
-  .quemSomosSection main h2 {
+  .quemSomosSection main h2, .chat main h2 {
     display: none;
   }
 
-  .quemSomosSection main p {
+  .quemSomosSection main p, .chat main p {
     color: var(--almost_white);
     line-height: 2.2;
   }
@@ -440,7 +440,7 @@ nav aside button {
     z-index: -1;
   }
 
-  .quemSomosSection{
+  .quemSomosSection, .chat{
     padding: 5em 1em;
   }
 }
