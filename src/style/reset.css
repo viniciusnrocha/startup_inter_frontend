@@ -5,8 +5,13 @@ html {
   box-sizing: border-box;
   font-size: 16px;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
+body{
+  overflow-x: hidden;
+  touch-action: pan-y pinch-zoom;
+}
 ::selection{
   background-color: #826fff;
   color: #fff;
