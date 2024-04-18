@@ -313,14 +313,14 @@ footer main div{
   align-items:flex-start;
   flex-direction: column;
   gap: 1em;
-  color: #f0f3ffb6;
-}
+  }
 
 footer main div a{
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #f0f3ffb6;
   gap: .5em;
   font-size: clamp(1em, 0.4em + 0.8vw, 1.5em);
 }
