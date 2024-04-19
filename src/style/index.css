@@ -171,18 +171,18 @@ nav aside button {
 
 .heroSection main p {
   color: #f0f3ffb4;
-  font-size: clamp(1em, .8em + .8vw, 1.8em);
+  font-size: clamp(1em, .7em + .7vw, 1.5em);
 }
 
 .heroSection main a {
   width: 100%;
 }
 
-.heroSection main button {
+.heroSection main a button {
   cursor: pointer;
   background-color: var(--cyan);
   border: 1px solid transparent;
-  font-size: clamp(1em, .8em + .8vw, 1.8em);
+  font-size: 1em;
   padding: 1em 1.5em;
   width: 100%;
   border-radius: 2em;
@@ -225,13 +225,14 @@ nav aside button {
   }
 
   .heroSection aside {
-    display: inline-block;
+    display: flex;
     box-shadow: 0 0 1em 0 var(--medium_purple);
     border-radius: 50%;
   }
 
   .heroSection aside img {
-    width: 18em;
+    max-width: 18em;
+    width: auto;
     height: auto;
     border-radius: 50%;
   }
@@ -329,59 +330,42 @@ nav aside button {
     display: none;
   }
 
-  .heroSection {
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  .heroSection aside {
-    display: flex;
-    box-shadow: 0 0 1em 0 var(--medium_purple);
-    border-radius: 50%;
-  }
-
   .heroSection aside img {
-    width: 22em;
+    max-width: 25em;
+    width: auto;
     height: auto;
     border-radius: 50%;
   }
 
   .heroSection main {
-    display: flex;
-    flex-direction: column;
-    gap: 3em;
-    max-width: 25em;
+    gap: 6em;
+    max-width: 30em;
+    width: auto;
+    text-align: left;
     align-items: flex-start;
   }
 
-  .heroSection main p {
-    font-size: 1.4em;
-  }
-
-  .heroSection main h1 {
-    font-size: 2.5em;
-  }
-
-  .heroSection main a {
-    width: 100%;
-  }
-
-  .heroSection main button {
-    cursor: pointer;
-    width: 100%;
-    padding: 1em 1.5em;
-    font-size: 1em;
-    font-weight: bolder;
-    background-color: var(--cyan);
-    border: 1px solid transparent;
+  .heroSection main a button {
+    position: relative;
     transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
   }
 
-  .heroSection main button:hover {
+  .heroSection main a button:hover {
     background-color: transparent;
     color: var(--almost_white);
     border: 1px solid var(--cyan);
+  }
+
+  .heroSection main a button:hover div {
+    display: block;
+  }
+
+  .heroSection main a button div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 2em;
+    background-color: red;
+    transition: all 300ms ease-in-out;
   }
 }
