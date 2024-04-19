@@ -9,18 +9,23 @@
   </head>
   <body>
     <main>
+      <img src="/src/images/heroLogo.png" alt="Logo" />
       <form action="">
-        <label for="email">E-mail</label>
-        <input type="email" name="email" id="email" required />
-        <label for="password">Senha</label>
-        <input type="password" name="password" id="password" required />
-        <button type="submit">Entrar</button>
-        <a href="../../index.html"><div>◁</div> Voltar</a>
+        <div>
+          <label for="email">E-mail</label>
+          <input type="email" name="email" id="email" placeholder="email@exemplo.com" required autocomplete="off"/>
+        </div>
+        <div>
+          <label for="password">Senha</label>
+          <input type="password" name="password" id="password" required />
+        </div>
+        <button type="submit" onclick="Login()">Entrar</button>
+        <a href="../../index.html"
+          ><div>◁</div>
+          Voltar</a
+        >
       </form>
+      <script src="../script/login.js" defer></script>
     </main>
-
-    <video width="100%" height="100%" autoplay loop>
-        <source src="../images/backgroundVideo.mp4" type="video/mp4">
-    </video>
   </body>
 </html>

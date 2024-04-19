@@ -222,6 +222,7 @@ nav aside button {
 
 .chat,
 .sustentabilidade {
+  position: relative;
   padding: 6em 1em;
 }
 
@@ -233,11 +234,6 @@ nav aside button {
 .chat main h2 img {
   width: 2em;
   height: 2em;
-}
-
-.sustentabilidade {
-  position: relative;
-  padding: 5em 2em;
 }
 
 .sustentabilidade aside {
