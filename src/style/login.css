@@ -1,0 +1,40 @@
+:root {
+    --very_dark_purple: #0d001d;
+    --dark_purple: #211951;
+    --medium_purple: #836fff;
+    --cyan: #15f5ba;
+    --almost_white: #f0f3ff;
+  }
+
+body{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    height: 100dvh;
+    background-color: #040013;
+    overflow: hidden;
+}
+
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em;
+    align-items: center;
+    background-color: var(--very_dark_purple);
+}
+
+main form{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
