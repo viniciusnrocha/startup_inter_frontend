@@ -4,15 +4,14 @@
   --medium_purple: #836fff;
   --cyan: #15f5ba;
   --almost_white: #f0f3ff;
+  --light_red: #ff4d4d;
+  --dark_red: #cc0000;
 }
 
 body {
   background-color: var(--dark_purple);
-  min-height: 400vh;
-  min-height: 400svh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
 
 nav {
   display: flex;
@@ -99,7 +98,7 @@ nav aside {
   right: 0;
   width: 100%;
   height: 100vh;
-  height: 100svh;
+  height: 100dvh;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -115,7 +114,7 @@ nav aside ul {
   display: flex;
   flex-direction: column;
   width: 100%;
-  font-size: clamp(1.2em, 0.4em + .8vw, 1.5em);
+  font-size: clamp(1.2em, 0.4em + 0.8vw, 1.5em);
 }
 
 nav aside ul li {
@@ -131,10 +130,20 @@ nav aside ul a {
 nav aside button {
   cursor: pointer;
   padding: 0.8em 2em;
-  font-size: clamp(1.2em, 0.4em + .8vw, 1.5em);
+  font-size: clamp(1.2em, 0.4em + 0.8vw, 1.5em);
   border-radius: 2em;
+  
+}
+
+.loggedButton{
   background-color: var(--medium_purple);
   border: 1px solid transparent;
+  color: var(--almost_white);
+}
+
+.notLoggedButton{
+  background-color: var(--light_red);
+  border: 1px solid var(--dark_red);
   color: var(--almost_white);
 }
 
@@ -160,18 +169,18 @@ nav aside button {
   width: 100%;
 }
 
-.heroSection main h1 {
-  color: var(--almost_white);
-  font-size: clamp(2.2em, 1.3em + 1.3vw, 2.8em);
-}
-
-.heroSection main h1 span {
+.heroSection main h2 {
+  line-height: 1.6;
+  font-size: clamp(1.7em, 1.1em + 1.1vw, 2.3em);
   color: var(--cyan);
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
-.heroSection main p {
-  color: #f0f3ffb4;
-  font-size: clamp(1em, .7em + .7vw, 1.5em);
+.heroSection main h2 span {
+  color: var(--almost_white);
+  font-weight: 400;
+  text-transform: none;
 }
 
 .heroSection main a {
@@ -180,13 +189,183 @@ nav aside button {
 
 .heroSection main a button {
   cursor: pointer;
+  color: var(--very_dark_purple);
   background-color: var(--cyan);
   border: 1px solid transparent;
   font-size: 1em;
-  padding: 1em 1.5em;
+  padding: 1em;
   width: 100%;
   border-radius: 2em;
   font-weight: 700;
+}
+
+.quemSomosSection {
+  padding: 6em 1em;
+  background-color: var(--very_dark_purple);
+}
+
+.quemSomosSection aside,
+.chat aside {
+  display: none;
+}
+
+.quemSomosSection main,
+.chat main,
+.sustentabilidade main {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.quemSomosSection main h2,
+.chat main h2,
+.sustentabilidade main h2 {
+  color: var(--cyan);
+  font-size: clamp(1.7em, 1.1em + 1.1vw, 2.3em);
+  font-weight: 600;
+}
+
+.quemSomosSection main p,
+.chat main p {
+  color: #f0f3ffb6;
+  font-size: clamp(1em, 0.4em + 0.8vw, 1.5em);
+  line-height: 1.8;
+}
+
+.chat,
+.sustentabilidade {
+  position: relative;
+  padding: 6em 1em;
+}
+
+.chat main h2 {
+  display: flex;
+  align-items: center;
+}
+
+.chat main h2 img {
+  width: 2em;
+  height: 2em;
+}
+
+.sustentabilidade aside {
+  display: none;
+}
+
+.sustentabilidade > img {
+  /* Blob */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+}
+
+.sustentabilidade main p {
+  color: #f0f3ffb6;
+  font-size: clamp(1em, 0.4em + 0.8vw, 1.5em);
+  line-height: 1.8;
+  text-shadow: 0 0 0.5em var(--dark_purple);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4em;
+  position: relative;
+  width: 100%;
+  padding: 4em 1em;
+  background-color: var(--very_dark_purple);
+  margin: 10em 0 0 0;
+}
+
+footer aside {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  color: var(--almost_white);
+}
+
+footer aside h2{
+  font-size: clamp(1.7em, 1.1em + 1.1vw, 2.3em);
+
+}
+
+footer aside img{
+  width: 6em;
+  height: 6em;
+  border-radius: 50%;
+}
+
+footer main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+footer main h3{
+  display: flex;
+  align-items: center;
+  gap: .5em;
+  color: var(--almost_white);
+  font-size: clamp(1.2em, 1em + 1vw, 2.3em);
+}
+
+footer main div{
+  display: flex;
+  align-items:flex-start;
+  flex-direction: column;
+  gap: 1em;
+  }
+
+footer main div a{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f0f3ffb6;
+  gap: .5em;
+  font-size: clamp(1em, 0.4em + 0.8vw, 1.5em);
+}
+
+footer main div a:hover{
+  text-decoration: underline;
+}
+
+footer main img {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+footer > div:nth-of-type(1){
+  width: max-content;
+  font-size: .7em;
+  color: var(--almost_white);
+}
+
+footer > a{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .5em;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  transform: translateX(-50%) translateY(-240%);
+  background-color: var(--medium_purple);
+  border-radius: 50%;
+}
+
+footer > a img{
+  width: 3em;
+  height: 3em;
 }
 
 /* Tablet */
@@ -206,7 +385,7 @@ nav aside button {
     z-index: 2;
   }
 
-  nav:has(input:checked)>div {
+  nav:has(input:checked) > div {
     position: absolute;
     top: 0;
     left: 0;
@@ -226,7 +405,7 @@ nav aside button {
 
   .heroSection aside {
     display: flex;
-    box-shadow: 0 0 1em 0 var(--medium_purple);
+    box-shadow: 0 0 2em 0.5em var(--very_dark_purple);
     border-radius: 50%;
   }
 
@@ -237,6 +416,104 @@ nav aside button {
     border-radius: 50%;
   }
 
+  .quemSomosSection {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 2fr;
+    gap: 2em;
+    padding: 9em 1em;
+  }
+
+  .quemSomosSection aside,
+  .chat aside {
+    display: flex;
+    align-items: center;
+  }
+
+  .quemSomosSection aside img {
+    width: clamp(25em, 12.5em + 12.5vw, 30em);
+    filter: brightness(0.7) contrast(1.5);
+  }
+
+  .quemSomosSection main h2,
+  .chat main h2 {
+    display: none;
+  }
+
+  .quemSomosSection main p,
+  .chat main p {
+    color: var(--almost_white);
+    line-height: 2.2;
+  }
+
+  .chat {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 5em 2em;
+  }
+
+  .chat aside img {
+    width: 50em;
+  }
+
+  .chat main {
+    width: 100%;
+  }
+
+  .chat main p {
+    line-height: 2.2;
+  }
+
+  .sustentabilidade {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+  }
+
+  .sustentabilidade aside {
+    display: flex;
+    align-items: center;
+  }
+
+  .sustentabilidade aside img {
+    width: 32em;
+    height: auto;
+  }
+
+  .sustentabilidade main {
+    width: 100%;
+  }
+
+  .sustentabilidade main h2 {
+    display: none;
+  }
+
+  .sustentabilidade main p {
+    text-align: justify;
+  }
+
+  .sustentabilidade > img {
+    /* Blob */
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  footer aside {
+    width: 100%;
+    padding: 0 2em;
+    align-items: center;
+  }
+  
+  footer aside img{
+    width: 7em;
+    height: 7em;
+  }
 }
 
 /* Desktop */
@@ -249,7 +526,6 @@ nav aside button {
     border-radius: 2em;
     box-shadow: 0 0 1.5em 0 #826fff65;
   }
-
 
   nav header img {
     width: 7em;
@@ -296,16 +572,16 @@ nav aside button {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: .1em;
+    height: 0.1em;
     background-color: var(--cyan);
     border-radius: 100%;
     transform: scaleX(0);
     transform-origin: center;
-    transition: all 200ms cubic-bezier(0.215, 0.610, 0.355, 1);
+    transition: all 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 
   nav aside ul li:hover div {
-    transform: scaleX(1)
+    transform: scaleX(1);
   }
 
   nav aside ul a {
@@ -313,59 +589,103 @@ nav aside button {
   }
 
   nav aside button {
-    padding: .5em 1.5em;
+    padding: 0.5em 1.5em;
+        transition: all 200ms ease-in-out;
+  }
+
+  .loggedButton{
     background-color: transparent;
     border: 1px solid var(--medium_purple);
     color: var(--almost_white);
-    transition: all 200ms ease-in-out;
   }
 
-  nav aside button:hover {
+  .notLoggedButton{
+    background-color: transparent;
+    border: 1px solid var(--light_red);
+    color: var(--almost_white);
+  }
+
+  .notLoggedButton:hover{
+    background-color: var(--light_red);
+    border: 1px solid transparent;
+    color: var(--very_dark_purple);
+  }
+  .loggedButton:hover{
     background-color: var(--medium_purple);
     border: 1px solid transparent;
     color: var(--very_dark_purple);
   }
 
-  nav>div {
+  nav > div {
     display: none;
   }
 
+  .heroSection {
+    padding: 5em 0 0 0;
+  }
+
   .heroSection aside img {
-    max-width: 25em;
-    width: auto;
-    height: auto;
-    border-radius: 50%;
+    width: 22em;
   }
 
   .heroSection main {
     gap: 6em;
     max-width: 30em;
-    width: auto;
-    text-align: left;
-    align-items: flex-start;
+    overflow: hidden;
+  }
+
+  .heroSection main h2 {
+    text-align: start;
+    width: 100%;
+  }
+
+  .heroSection main a {
+    width: 100%;
   }
 
   .heroSection main a button {
     position: relative;
+    background-color: transparent;
+    border: 1px solid var(--cyan);
+    color: var(--almost_white);
     transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
   }
 
   .heroSection main a button:hover {
     background-color: transparent;
-    color: var(--almost_white);
-    border: 1px solid var(--cyan);
+    border: 1px solid transparent;
+    color: var(--very_dark_purple);
   }
 
   .heroSection main a button:hover div {
-    display: block;
+    transform: translateX(-50%) translateY(-50%) scaleX(1);
+  }
+
+  .heroSection main a button:active {
+    transform: scale(0.9);
   }
 
   .heroSection main a button div {
     position: absolute;
+    background-color: var(--cyan);
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) scaleX(0);
+    transform-origin: center;
     width: 100%;
     height: 100%;
-    border-radius: 2em;
-    background-color: red;
-    transition: all 300ms ease-in-out;
+    border-radius: 3em;
+    transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: -1;
+  }
+
+  .quemSomosSection,
+  .chat,
+  .sustentabilidade {
+    padding: 5em 8em;
+  }
+
+  .sustentabilidade main {
+    width: 50%;
   }
 }
