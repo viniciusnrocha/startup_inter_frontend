@@ -1,0 +1,100 @@
+:root {
+  --very_dark_purple: #0d001d;
+  --dark_purple: #211951;
+  --medium_purple: #836fff;
+  --cyan: #15f5ba;
+  --almost_white: #f0f3ff;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  background: url(../images/loginBackground.png) no-repeat center center/cover;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2em;
+  align-items: center;
+  background-color: var(--dark_purple);
+  color: var(--almost_white);
+  width: clamp(20em, 10em + 12vw, 25em);
+  padding: 2em 3em;
+  border-radius: 3em;
+}
+
+main > img {
+    border-radius: 50%;
+    width: 8em;
+    height: auto;
+  }
+
+main form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  width: 80%;
+}
+
+main form div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  width: 100%;
+}
+
+main form div label {
+  font-size: 1.2em;
+}
+
+main form div input {
+  padding: 1em;
+  border: 1px solid var(--medium_purple);
+  border-radius: 0.5em;
+  background-color: transparent;
+  color: var(--almost_white);
+}
+
+main form div input:focus {
+  outline: none;
+  border: 1px solid var(--cyan);
+}
+
+main form button {
+  padding: .6em;
+  border: 1px solid var(--medium_purple);
+  border-radius: 0.5em;
+  background-color: var(--medium_purple);
+  color: var(--almost_white);
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.2em;
+  transition: all 200ms ease-in-out;
+}
+
+main form button:hover{
+    background-color: transparent;
+}
+
+main form a {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    color: var(--almost_white);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+main form a div{
+    transition: all 200ms ease;
+}
+
+main form a:hover div{
+    transform: translateX(-20%);
+}
