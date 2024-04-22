@@ -10,7 +10,7 @@
   <body>
     <main>
       <img src="/src/images/heroLogo.png" alt="Logo" />
-      <form action="">
+      <form onsubmit="Login(event)">
         <div>
           <label for="email">E-mail</label>
           <input type="email" name="email" id="email" placeholder="email@exemplo.com" required autocomplete="off"/>
@@ -19,13 +19,13 @@
           <label for="password">Senha</label>
           <input type="password" name="password" id="password" required />
         </div>
-        <button type="submit" onclick="Login()">Entrar</button>
+        <button type="submit">Entrar</button>
         <a href="../../index.html"
           ><div>◁</div>
           Voltar</a
         >
       </form>
-      <script src="../script/login.js" defer></script>
+      <script src="../script/login.js" async></script>
     </main>
   </body>
 </html>
