@@ -26,6 +26,7 @@ main {
   width: clamp(20em, 10em + 12vw, 25em);
   padding: 2em 3em;
   border-radius: 3em;
+  box-shadow: 0 0 1em 0.5em #0000003a;
 }
 
 main > img {

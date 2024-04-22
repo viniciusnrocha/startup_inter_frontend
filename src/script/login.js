@@ -24,6 +24,7 @@ async function Login(event) {
         return res.json()
     }).then(data => {
         localStorage.setItem('tokenSphynx', data.token)
+        localStorage.setItem('nameSphynx', data.name)
         window.location.href = '/'
     }).catch(err => {
         console.error(err)
