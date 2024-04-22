@@ -1,0 +1,71 @@
+:root {
+    --very_dark_purple: #0d001d;
+    --dark_purple: #211951;
+    --medium_purple: #836fff;
+    --cyan: #15f5ba;
+    --almost_white: #f0f3ff;
+    --light_red: #ff4d4d;
+    --dark_red: #cc0000;
+  }
+
+  body{
+    min-height: 100dvh;
+    min-height: 100svh;
+    background: radial-gradient( var(--dark_purple), var(--very_dark_purple)) no-repeat center center fixed;
+    color: var(--almost_white);
+  }
+
+  body > h1{
+    color: var(--almost_white);
+    text-align: center;
+    padding: 1em 0 0 0;
+  }
+
+  section {
+    display: grid;
+    gap: 3em;
+    padding: 4em 1em 0 1em;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  section .agent-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .8em;
+    color: var(--very_dark_purple);
+    background-color: var(--almost_white);
+    padding: .8em;
+    border-radius: 2em;
+  }
+
+  section .agent-list h2 {
+    color: var(--dark_purple);
+    font-size: clamp(1.5em, .9em .9vw, 2.2em);
+    font-weight: 700;
+  }
+
+  section .agent-list aside{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+  }
+
+  section .agent-list aside img{
+    width: 8em;
+  }
+
+  section .agent-list aside ul{
+    display: flex;
+    flex-direction: column;
+    gap: .3em;
+  }
+
+  section .agent-list aside ul li{
+    font-weight: 700;
+  }
+  section .agent-list aside ul li:nth-child(odd){
+    background-color: #dddee2;
+  }
