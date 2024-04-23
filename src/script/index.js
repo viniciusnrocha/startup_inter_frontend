@@ -33,6 +33,7 @@ function Logout() {
     const token = localStorage.getItem('tokenSphynx')
     if(token){
         localStorage.removeItem('tokenSphynx')
+        localStorage.removeItem('nameSphynx')
         window.location.href = window.location.href
     }
 }
