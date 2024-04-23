@@ -15,7 +15,7 @@ function validateUser() {
 }
 
 async function showAgentLIst() {
-  const res = await fetch("http://192.168.0.121:5000/chat/agents/1", {
+  const res = await fetch("https://startup-inter.vercel.app/chat/agents/1", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
