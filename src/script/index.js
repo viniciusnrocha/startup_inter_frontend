@@ -18,15 +18,18 @@ function checkScrollPosition() {
 
 function authenticate() {
     const token = localStorage.getItem('tokenSphynx')
+    const dasboardLink = document.querySelector('#dashboard')
     if(!token){
         loginLogoutButton.innerHTML = 'Entrar'
         loginLogoutButton.classList.add('loggedButton')
         loginLogoutButton.classList.remove('notLoggedButton')
+        dasboardLink.style.display = 'none'
         return
     }
     loginLogoutButton.classList.remove('loggedButton')
     loginLogoutButton.classList.add('notLoggedButton')
     loginLogoutButton.innerHTML = 'Sair'
+    dasboardLink.style.display = 'flex'
 }
 
 function Logout() {

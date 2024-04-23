@@ -25,6 +25,23 @@ body > img{
   transform: rotateX(180deg);
 }
 
+body > a{
+  position: fixed;
+  top: 30%;
+  left: 0;
+  padding: 1em;
+  border-radius: 0 2em 2em 0;
+  background-color: #15f5b97a;
+  color: var(--almost_white);
+  z-index: 3;
+  transition: all 200ms ease-in-out;
+}
+
+body > a:hover{
+  background-color: var(--cyan);
+  color: var(--dark_purple);
+}
+
 nav {
   display: flex;
   padding: 0.8em;
